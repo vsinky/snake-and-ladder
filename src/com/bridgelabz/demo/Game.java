@@ -19,15 +19,21 @@ public class Game {
 
 			case NO_PLAY:
 				break;
+
 			case snake:
-				int temp = player - dice;
-				if (temp < 0) {
+				int temp1 = player - dice;
+				if (temp1 < 0)
 					player = 0;
-				} else
-					player = temp;
+				else
+					player = temp1;
 				break;
+
 			case ladder:
-				player = player + dice;
+
+				int temp2 = player + dice;
+				if (temp2 <= 100)
+					player = temp2;
+
 				break;
 
 			}
